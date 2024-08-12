@@ -2,7 +2,7 @@ import React from "react";
 import projects from "../projects.json";
 import ProjectCard from "./ProjectCard";
 
-const ProjectLis = () => {
+const ProjectList = () => {
   const recentProjects = projects.slice(0, 3);
   return (
     <section className="bg-blue-50 px-4 py-10">
@@ -20,4 +20,4 @@ const ProjectLis = () => {
   );
 };
 
-export default ProjectLis;
+export default ProjectList;
