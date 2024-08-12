@@ -4,7 +4,7 @@ import Homecards from "../components/Homecards";
 import ProjectList from "../components/ProjectList";
 import ViewAllProjects from "../components/ViewAllProjects";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <Hero title="Daphnée Jeune" subtitle="Software engineer" />
@@ -15,4 +15,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
