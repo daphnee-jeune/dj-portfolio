@@ -1,22 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Homecards from "./components/Homecards";
-import ProjectList from "./components/ProjectList";
-import ViewAllProjects from "./components/ViewAllProjects";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
-  return (
-    <div>
-      <>
-        <Navbar />
-        <Hero title="Daphnée Jeune" subtitle="Software Engineer" />
-        <Homecards />
-        <ProjectList />
-        <ViewAllProjects />
-      </>
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+       <Route index element={<Homepage />}/>
+    </Route>,
+    )
   );
+  return <RouterProvider router={router} />
 };
 
 export default App;
